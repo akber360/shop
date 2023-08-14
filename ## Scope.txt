@@ -1,0 +1,37 @@
+## Scope
+
+ 
+
+***AGILE*** utilisation of Sprints, user stories, acceptance criteria, story points. Prioritisation of these features is the key to success. There is time for two 2-day Sprints before the site is scheduled to "go live". take 10 minutes in each morning to plan out your day. the rest should be fine even solo.
+
+ 
+
+***KANBAN via JIRA*** A Kanban board with full expansion on user stories and tasks needed to complete the project - The user stories should be on the project management board, which you can then include screenshot(s) of in the README. you can even put a task breakdown into the description of each of your user stories if you want to keep it well structured. create user stories for the new optional ones like logo as well. keep taking screenshots of kanban board so right at the beginning without having added in user stories, then once you've added, then at the end
+
+along with a record of any issues or risks encountered during project creation.-> required to track your designs and workflow throughout the duration of the project, with emphasis on how Agile methodology shaped the application over time. (kanban board for the planning stage. The screenshots would be in the README of the repo (which will act as the documentation for the project). You could put a description of what you did in the README if you prefer) 
+
+***GITHUB*** Code integrated into a central repository on a Version Control System, utilizing issues, pull requests, merge requests, and any other aspects deemed appropriate.-> You will be required to utilize the Feature-Branch Model, and to push a working copy of your code to the main branch regularly. It is recommended to use the feature- naming strategy for your feature branches.
+
+ 
+
+***MySQL*** Database Management System
+
+ 
+
+***PYTHON*** Back-End Programming Language
+
+ 
+
+***FLASK*** API Development Platform
+
+ 
+
+***HTML, CSS, JAVASCRIPT*** Front-End Development Framework, use Bootstrap
+
+ 
+
+You should consider the concept of MVP (Minimum Viable Product) as you plan your project.
+
+ 
+
+Ensure that you complete all the Client requirements before adding extra functionality that is not explicitly specified.
