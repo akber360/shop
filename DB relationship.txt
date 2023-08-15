@@ -7,7 +7,7 @@ A customer can place many orders.
 An order is placed by exactly one customer.
 
 Order to OrderDetail: One-to-Many
-An order can consist of multiple order details (lines/items).
+An order can consist of multiple order details
 An order detail refers to one order.
 
 Product to OrderDetail: One-to-Many
