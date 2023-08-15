@@ -1,6 +1,11 @@
 from application import app, db
 from application.models import Customer,Order,Product,Order_detail
 from flask import render_template, request, redirect,url_for
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField, DateField, IntegerField, SelectField
+from wtforms.validators import ValidationError, DataRequired, Length
+from datetime import datetime
+date = datetime.now()
 
 @app.route('/cart')
 def cart():
@@ -26,6 +31,98 @@ def delete_item(order_detail_id):
         db.session.commit()    
     return redirect(url_for('cart'))  # Removed the form object from the redirect
 
-@app.route('/payment')
+class PayForm(FlaskForm):
+    card_num = StringField('Enter 16 digit Card Number', validators=[
+        DataRequired(),
+        Length(min=16, max=16)])
+    cvc_num = StringField('Enter 3 digit CVC Number', validators=[
+        DataRequired(),
+        Length(min=3, max=3)])    
+    submit = SubmitField('Pay Now')
+
+@app.route('/payment', methods=['GET', 'POST'])
 def payment():
-    return render_template('payment.html')
+    message = ""
+    form = PayForm()
+    if request.method == 'POST':
+            date= date
+            # Create a new Customer instance
+            order = Order(
+            date=order.order_date 
+
+            )
+            # Add and commit the new customer to the database
+            db.session.add(order)
+            db.session.commit()
+            message = f'Thank you, Payment has been Accepted' 
+    return render_template('payment.html', form=form, message=message)
+
+class ShipForm(FlaskForm):
+    first_name = StringField('First Name', validators=[
+        DataRequired(),
+        Length(min=4, max=30)])
+    last_name = StringField('Last Name', validators=[
+        DataRequired(),
+        Length(min=2, max=30)])
+    
+    email = StringField('Email', validators=[
+        DataRequired(),
+        Length(min=2, max=60)])
+    
+    phone_num = StringField('Enter your phone number', validators=[
+        DataRequired(),
+        Length(min=5, max=16)])
+    
+    address = StringField('post code and door number', validators=[
+        DataRequired(),
+        Length(min=2, max=15)])
+    submit = SubmitField('Click here to save your address')
+
+@app.route('/shipping', methods=['GET', 'POST'])
+def shipping():
+    message = ""
+    form = ShipForm()
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            first_name = form.first_name.data
+            last_name = form.last_name.data
+            email = form.email.data
+            phone = form.phone_num.data
+            address = form.address.data
+            # Create a new Customer instance
+            customer = Customer(
+                first_name=first_name,
+                last_name=last_name,
+                email=email,
+                phone=phone,
+                address=address
+            )
+            # Add and commit the new customer to the database
+            db.session.add(customer)
+            db.session.commit()
+            message = f'Thank you, {first_name} {last_name}. Payment Accepted' 
+    return render_template('shipping.html', form=form, message=message)
+
+
+@app.route('/product', methods=['GET', 'POST'])
+def product():
+    return render_template('product.html', methods=['GET','POST'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
