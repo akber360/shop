@@ -1,8 +1,29 @@
+1. Project Overview
+The task was given to create a website, this website had client specific requirements it had MVP and Wishlist. The MVP was to create a website with functions that included cart checkout payment proccing logic, CREATE READ UPDATE DELETE function on cart. Wish list included features that client wanted but were not essential. My project did not include any item from the Wishlist. 
 
+The project consists of using the following:
+Kanban (via Jira) for project management and agile framework
+Git as the version control system
+GitHub for source code management
+HTML, CSS, JavaScript and Bootstrap for front-end development
+Python as the back-end programming language
+Flask as the API development platform
+MySQL/SQLite as the database management system originally MySQL was used but SQLite was used later till end of project for ease of use.
+
+2. How I used Agile Methodology
+In the morning of each day a standup was done, in which task to be done was talked about, blockers preventing from tasks and solutions on how to remove said blockers were thought up off. A retrospective meeting was done at the end of every sprint, for me a sprint was finishing a feature.
+From kanban board when a story was moved to done it was the end of that story sprint.
+
+3. How I used my Kanban board
+Epics, User Stories, Tasks and Acceptance Criteria
+Initially there were 9 user stories created one for each of the html page and then some were created for the logic or functioning of the page. Each user story consisted of having description, a long with the as user I want so that statements, it had acceptance criteria and also included child issues which was the main issue further broken down.
+Risk Assessment
+This displays some of the risks that I may have encountered during the project, including the steps to mitigate any negative impacts. Based on this risk assessment, I was able to make changed to my code to decrease the possibility of the risks happening.
 
 ERD Diagram: ![image](https://github.com/akber360/shop/assets/139133081/876ecd48-bd19-43c6-8ae6-1eb398894232)
 
- DB relationship 
+DB relationship explained
+
 Relationships
 Customer to Order: One-to-Many
 
@@ -16,44 +37,6 @@ An order detail refers to one order.
 Product to OrderDetail: One-to-Many
 A product can be part of multiple order details.
 An order detail refers to one product.
-
-
-
-Jenkins section - included test reports as a sub-section and analyse them
-
-the way that im using jenkins as a pipeline means i can automate the code. jenkins also handled my test automation and some screenshots of tests passing and faileing and wha ti encountered with the test.
-
-Future Steps: further analysis, what would i do next if i continued with this project id add this feature create new database relationship etc.
-
-Licensing: vscode sqlite jenkins, Jira Kanban
-
-Contributors: w3schools, Qa community, bootstrap, stack overflow ,EARL’s Git repo all flask excercises
-
-Acknowledgements: all QA trainers and Earl was super helpful in answering my questions.
-
-1. Project Overview
-The task was given to create a website, this website had client specific requirements it had MVP and Wishlist. The MVP was to create a website with functions that included cart checkout payment proccing logic, CREATE READ UPDATE DELETE function on cart. Wish list included features that client wanted but were not essential. My project did not include any item from the Wishlist. 
-
-The project consists of using the following:
-Kanban (via Jira) for project management and agile framework
-Git as the version control system
-GitHub for source code management
-HTML, CSS, JavaScript and Bootstrap for front-end development
-Python as the back-end programming language
-Flask as the API development platform
-MySQL/SQLite as the database management system originally MySQL was used but SQLite was used later till end of project for ease of use.
-
-
-2. How I used Agile Methodology
-In the morning of each day a standup was done, in which task to be done was talked about, blockers preventing from tasks and solutions on how to remove said blockers were thought up off. A retrospective meeting was done at the end of every sprint, for me a sprint was finishing a feature.
-From kanban board when a story was moved to done it was the end of that story sprint.
-
-3. How I used my Kanban board
-Epics, User Stories, Tasks and Acceptance Criteria
-Initially there were 9 user stories created one for each of the html page and then some were created for the logic or functioning of the page. Each user story consisted of having description, a long with the as user I want so that statements, it had acceptance criteria and also included child issues which was the main issue further broken down.
-Risk Assessment
-This displays some of the risks that I may have encountered during the project, including the steps to mitigate any negative impacts. Based on this risk assessment, I was able to make changed to my code to decrease the possibility of the risks happening.
-
 Evolution of Ideas
 Originally I wanted to create a website for icream, but it had a lot of flavours and not many categories so I went for EARTH WIND FIRE AIR categories. 
 
@@ -62,7 +45,6 @@ Summary of Kanban board
 this is what the kanban looked like during the phases as you can see I have a To do in progress and done sections this is where stories would move as they progressed along.
 ![image](https://github.com/akber360/shop/assets/139133081/03dbd68c-0ea1-4417-895c-b6355ba74ba8)
 Here is an example of how a user story would look. consisintg of child cases and user story statmenet 
-
 
 Git Branching
 ![image](https://github.com/akber360/shop/assets/139133081/a010a6eb-a93b-43f9-a258-3cba96a6e91c)
@@ -86,3 +68,10 @@ Jenkins was setup and running taking the github repo and building from their via
 ![image](https://github.com/akber360/shop/assets/139133081/9c0816a2-3235-4f1b-aeaf-029961c1be70)
 ![image](https://github.com/akber360/shop/assets/139133081/8fd22452-68ff-4781-97d2-ffee145a14ec)
 
+Future Steps: further analysis, what would i do next if i continued with this project id add this feature create new database relationship etc.
+
+Licensing: vscode sqlite jenkins, Jira Kanban
+
+Contributors: w3schools, Qa community, bootstrap, stack overflow ,EARL’s Git repo all flask excercises
+
+Acknowledgements: all QA trainers and Earl was super helpful in answering my questions.
