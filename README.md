@@ -81,3 +81,10 @@ this is what the kanban looked like during the phases as you can see I have a To
 ![image](https://github.com/akber360/shop/assets/139133081/03dbd68c-0ea1-4417-895c-b6355ba74ba8)
 Here is an example of how a user story would look. consisintg of child cases and user story statmenet 
 
+
+Git Branching
+![image](https://github.com/akber360/shop/assets/139133081/a010a6eb-a93b-43f9-a258-3cba96a6e91c)
+
+using git as source control mangagment, I used the branch features, where each branch would be a feature that I would be working on e.g. Database
+payment add-to-cart. after the feature was developed it would be pushed and main would be merging and pulling it in. so at the end of the project main had all the uptodate code.
+
