@@ -1,0 +1,28 @@
+50 marks total, 10 sections of 5 marks, need 30/50 to "pass"
+Frontend (HTML, CSS styling, some responsiveness) - Farah
+Home (needs to be "visually appealing")
+About
+Products (minimum 4) including add button
+Separate product page with more details
+Categories
+Contact
+Cart
+Checkout
+Payment form
+(optional) Search functionality
+
+---GitHub feature branching - Individual
+
+---Kanban board - Team
+
+---Jenkins - Team
+-----Need to do builds
+----------Webhooks (leave until the end cause it's complicated but worth 2 marks)
+-----Unit testing - Team
+-----Achieve 95% test coverage for full 5 marks
+
+README - Team
+
+---ERD diagram
+
+Refer to screenshot of README structure
