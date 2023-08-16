@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333366;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        h3 {
+            color: #660066;
+        }
+</style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    </head>
+    <body>
+    <h1>Your Cart</h1>
+    <table>
+    <tr>
+    <th>Order Detail ID</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    </tr>
+     <tr>           
+           {% for order in all_orders %}
+    <td>{{ order.order_detail_id }}</td>
+    <td>
+            {% for product in all_product %}
+            {% if product.product_id == order.product_id %} 
+                {{product.name}}
+            {% endif %}
+            {% endfor %}
+    </td>
+    <td>{{ order.quantity }}</td>
+    <td>{{ order.price }}</td>
+    </tr>         
+            
+            {% endfor %}
+
+                    {% for order in all_orders %}
+            <tr>
+            <!-- ... other columns for the item details ... -->
+         
+
+                <!-- Column for updating the quantity -->
+            <td>
+            <form action="{{ url_for('update_quantity', order_detail_id=order.order_detail_id) }}" method="post">
+            <input type="number" name="new_quantity" value="{{ order.quantity }}" min="1">
+            <input type="submit" value="Update">
+            </form>
+            </td>
+          
+
+                <!-- Column for deleting the item -->
+            <td>
+            <form action="{{ url_for('delete_item', order_detail_id=order.order_detail_id) }}" method="post"> 
+            <input type="submit" value="Delete">
+            </form>
+            </td>
+            </tr>
+            {% endfor %}
+        
+    </table>
+
+
+    <h3>Total Amount: £ {{ total_amount }}</h3> <br>
+    <div>
+    <a href="{{ url_for('payment') }}">checkout</a>
+    </div>
+
+
+    </body>
+    </html>
+        
+
+  </body>
+</html>
