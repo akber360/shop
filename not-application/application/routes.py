@@ -7,6 +7,18 @@ from wtforms.validators import ValidationError, DataRequired, Length
 from datetime import datetime
 date = datetime.now()
 
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 @app.route('/cart')
 def cart():
     all_product = Product.query.all()
@@ -45,15 +57,6 @@ def payment():
     message = ""
     form = PayForm()
     if request.method == 'POST':
-            date= date
-            # Create a new Customer instance
-            order = Order(
-            date=order.order_date 
-
-            )
-            # Add and commit the new customer to the database
-            db.session.add(order)
-            db.session.commit()
             message = f'Thank you, Payment has been Accepted' 
     return render_template('payment.html', form=form, message=message)
 
@@ -105,24 +108,30 @@ def shipping():
 
 
 @app.route('/product', methods=['GET', 'POST'])
-def product():
-    return render_template('product.html', methods=['GET','POST'])
+def products():
+    products = Product.query.all()
+    return render_template('product.html', products=products)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@app.route('/add_to_cart', methods=['POST'])
+def add_to_cart():
+    product_id = request.form.get('product_id')
+    product = Product.query.get(product_id)
+    # Check if there's an active cart for the current session
+    cart_order = Order.query.filter_by(is_cart=True, status=True).first()  # Find active cart
+    if not cart_order:
+        # If no cart, create one
+        cart_order = Order(status=True, is_cart=True, order_date=datetime.now())
+        db.session.add(cart_order)
+        db.session.commit()
+    if product:
+        # Create a new Order_detail instance
+        order_detail = Order_detail(
+            order_id=cart_order.order_id,
+            product_id=product.product_id,
+            quantity=1,  # You can modify this to take quantity as an input
+            price=product.price
+        )
+        # Add and commit the new order_detail to the database
+        db.session.add(order_detail)
+        db.session.commit()
+    return redirect(url_for('products'))
