@@ -59,9 +59,6 @@ Flask as the API development platform
 MySQL/SQLite as the database management system originally MySQL was used but SQLite was used later till end of project for ease of use.
 
 
-
-
-
 2. How I used Agile Methodology
 In the morning of each day a standup was done, in which task to be done was talked about, blockers preventing from tasks and solutions on how to remove said blockers were thought up off. A retrospective meeting was done at the end of every sprint, for me a sprint was finishing a feature.
 From kanban board when a story was moved to done it was the end of that story sprint.
@@ -87,4 +84,14 @@ Git Branching
 
 using git as source control mangagment, I used the branch features, where each branch would be a feature that I would be working on e.g. Database
 payment add-to-cart. after the feature was developed it would be pushed and main would be merging and pulling it in. so at the end of the project main had all the uptodate code.
+![image](https://github.com/akber360/shop/assets/139133081/64b14cf6-02dd-470d-8511-4d72032e3c3a)
+Exmaple of branch merging.
+![image](https://github.com/akber360/shop/assets/139133081/ae04730a-6a1e-4e5a-b9e1-e1f1ee3a8c01)
+
+py-test
+![image](https://github.com/akber360/shop/assets/139133081/5d73c9cf-c57b-4bcf-8627-ff46e85fbae1)
+
+I created simple assestion test. and setup the three states create which loads up the app setup which loads the database with dummy data and teardown which removes all dummy data so that when the tests are ran there is no old data running to cause conflict
+There was three test to see if code would =200 and =302 and if product id=1.
+
 
