@@ -10,7 +10,6 @@ app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'
 @app.route('/')
 def home():
     return render_template('homepage.html')
-
 #### payform route /payment
 class PayForm(FlaskForm):
     first_name = StringField('First Name', validators=[
@@ -29,9 +28,8 @@ class PayForm(FlaskForm):
         DataRequired(),
         Length(min=3, max=3)
     ])    
-
-
     submit = SubmitField('Pay Now')
+    
 @app.route('/payment', methods=['GET', 'POST'])
 def payment():
     message = ""
