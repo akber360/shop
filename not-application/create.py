@@ -24,6 +24,11 @@ with app.app_context():
     db.session.add(zip_line)
     db.session.commit()
 
-    pear = Product(name="pear", description="its a nice pear", price=100, stock_level=100)
-    db.session.add(pear)
+    flying = Product(name="flying", description="on a small fast plane", price=150, stock_level=1)
+    db.session.add(flying)
     db.session.commit()
+
+    gun_range = Product(name="Gun Range", description="Wild wild west style", price=75, stock_level=1)
+    db.session.add(gun_range)
+    db.session.commit()
+
