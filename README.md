@@ -73,7 +73,11 @@ Risk Assessment
 This displays some of the risks that I may have encountered during the project, including the steps to mitigate any negative impacts. Based on this risk assessment, I was able to make changed to my code to decrease the possibility of the risks happening.
 
 Evolution of Ideas
-Originally I wanted to create a 
+Originally I wanted to create a website for icream, but it had a lot of flavours and not many categories so I went for EARTH WIND FIRE AIR categories. 
 
 Summary of Kanban board
-Here are some images of what my Kanban board looked like at the beginning, middle and end.
+![image](https://github.com/akber360/shop/assets/139133081/7a833774-6196-4f0f-abae-d17a6e922ce2)
+this is what the kanban looked like during the phases as you can see I have a To do in progress and done sections this is where stories would move as they progressed along.
+![image](https://github.com/akber360/shop/assets/139133081/03dbd68c-0ea1-4417-895c-b6355ba74ba8)
+Here is an example of how a user story would look. consisintg of child cases and user story statmenet 
+
