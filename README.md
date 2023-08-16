@@ -40,11 +40,11 @@ the way that im using jenkins as a pipeline means i can automate the code. jenki
 
 Future Steps: further analysis, what would i do next if i continued with this project id add this feature create new database relationship etc.
 
-Licensing: vscode sqlite jenkins
+Licensing: vscode sqlite jenkins, Jira Kanban
 
-Contributors: w3schools, Qa community, bootstrap, stack overflow EARL’s Git repo all flask excercises
+Contributors: w3schools, Qa community, bootstrap, stack overflow ,EARL’s Git repo all flask excercises
 
-Acknowledgements: all QA trainers
+Acknowledgements: all QA trainers and Earl was super helpful in answering my questions.
 
 1. Project Overview
 The task was given to create a website, this website had client specific requirements it had MVP and Wishlist. The MVP was to create a website with functions that included cart checkout payment proccing logic, CREATE READ UPDATE DELETE function on cart. Wish list included features that client wanted but were not essential. My project did not include any item from the Wishlist. 
@@ -94,4 +94,10 @@ py-test
 I created simple assestion test. and setup the three states create which loads up the app setup which loads the database with dummy data and teardown which removes all dummy data so that when the tests are ran there is no old data running to cause conflict
 There was three test to see if code would =200 and =302 and if product id=1.
 
+
+Jenkins
+Jenkins was setup and running taking the github repo and building from their via the shell commands that were given. the app.py file was running and jenkins was running a server. 
+![image](https://github.com/akber360/shop/assets/139133081/5236da7b-a38e-46d9-abfe-373c312d141c)
+![image](https://github.com/akber360/shop/assets/139133081/9c0816a2-3235-4f1b-aeaf-029961c1be70)
+![image](https://github.com/akber360/shop/assets/139133081/8fd22452-68ff-4781-97d2-ffee145a14ec)
 
