@@ -75,3 +75,7 @@ Licensing: vscode sqlite jenkins, Jira Kanban
 Contributors: w3schools, Qa community, bootstrap, stack overflow ,EARL’s Git repo all flask excercises
 
 Acknowledgements: all QA trainers and Earl was super helpful in answering my questions.
+
+risk assesment
+![image](https://github.com/akber360/shop/assets/139133081/97f6f08d-be09-474c-967b-db81a7c7bc54)
+
