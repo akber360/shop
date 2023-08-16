@@ -1,8 +1,82 @@
 <html>
     <head>
-        <title>Simple form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="\static\style.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <title>Shipping Form</title>
     </head>
     <body>
+             <!-- Navigation -->
+     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-logo" href=""><img src="\static\logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('category') }}">category</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('products') }}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('cart') }}">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('shipping') }}">Shipping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('payment') }}">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr style="background-color: #f2f2f2;">
+                    <th style="border: 1px solid #ddd; padding: 8px;">Order Detail ID</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Name</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Quantity</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Price</th>
+                </tr>
+                {% for order in all_orders %}
+                <tr style="{{ 'background-color: #f9f9f9;' if loop.index0 % 2 == 0 else '' }}">
+
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ order.order_detail_id }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">
+                        {% for product in all_product %}
+                            {% if product.product_id == order.product_id %}
+                                {{product.name}}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ order.quantity }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ order.price }}</td>
+                </tr> 
+                {% endfor %}
+            </table>
+        </div>
+
         <div class='form'>
             <form method='POST' action=''>
                 {{ form.hidden_tag() }}
@@ -21,9 +95,9 @@
                 <br>
                 {{ form.submit }}
                 <br>
-            {{ message }}
-            <a href="{{ url_for('payment') }}">Continue for checkout</a>
-            </form>
+                {{ message }}
+                <a href="{{ url_for('payment') }}">Continue for checkout</a>
+            </form>    
         </div>
     </body>
 </html>

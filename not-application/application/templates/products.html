@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Two Piece</title>
+	<title>All Products</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -12,6 +12,43 @@
 	<link href="\static\style.css" rel="stylesheet">
 </head>
 <body>
+	     <!-- Navigation -->
+		 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+			<div class="container">
+				<a class="navbar-logo" href=""><img src="\static\logo.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('home') }}">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('category') }}">category</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('products') }}">Products</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('cart') }}">Cart</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('shipping') }}">Shipping</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('payment') }}">Payment</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('about') }}">About</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
 	<!-- Welcome Section -->
 	<div class="container-fluid padding">
@@ -27,36 +64,36 @@
 		</div>
 
 		
-	 <!-- Image Gallery Section -->
-		<div class="row gallery-row">
-			<div class="col-12">
-				<h2 class="text-center">Image Gallery</h2>
-			</div>
-			<div class="col-md-4 gallery-item">
-				<img src="\static\product-1.png" alt="Image 1">
-				</div>
-			<div class="col-md-4 gallery-item">
-				<img src="\static\product-2.png" alt="Image 2">
-				</div>
-			<div class="col-md-4 gallery-item">
-				<img src="\static\product-3.png" alt="Image 3">
-				</div>
-			<div class="col-md-4 gallery-item">
-				<img src="\static\product-4.png" alt="Image 4">
-				</div>
-		</div>
+<!-- Image Gallery Section -->
+<div class="row gallery-row">
+	<div class="col-12">
+		<h2 class="text-center"></h2>
+	</div>
+	<div class="col-md-4 gallery-item">
+		<img src="\static\gunrange.jpg" alt="Image 1" style="max-width: 100%; height: auto; display: block; margin: auto;">
+	</div>
+	<div class="col-md-4 gallery-item">
+		<img src="\static\mountain-biking.png" alt="Image 2" style="max-width: 100%; height: auto; display: block; margin: auto;">
+	</div>
+	<div class="col-md-4 gallery-item">
+		<img src="\static\zipline.png" alt="Image 3" style="max-width: 100%; height: auto; display: block; margin: auto;">
+	</div>
+	<div class="col-md-4 gallery-item">
+		<img src="\static\plane.jpg" alt="Image 4" style="max-width: 100%; height: auto; display: block; margin: auto;">
+	</div>
+</div>
 	
 		<!-- Product Descriptions Section -->
 		<div class="row product-description-section">
 			<div class="col-md-3 col-sm-6 product-description">
-				<h3>Product 1</h3>
-				<p>This is the description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<h3>Zip Lining</h3>
+				<p>Worlds longest zipline 5km long going up to 200mph reached</p>
 				<a href="{{ url_for('product1') }}" class="btn btn-primary">View Product</a>
 			</div>
 			<div class="col-md-3 col-sm-6 product-description">
-				<h3>Product 2</h3>
-				<p>This is the description of Product 2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-				<a href="product2.html" class="btn btn-primary">View Product</a>
+				<h3>Cycling</h3>
+				<p>Cycling down mountains is fun.</p>
+				<a href="{{ url_for('product2') }}" class="btn btn-primary">View Product</a>
 			</div>
 			<div class="col-md-3 col-sm-6 product-description">
 				<h3>Product 3</h3>
@@ -79,8 +116,7 @@
 					<th>Name</th>
 					<th>Description</th>
 					<th>Price</th>
-					<th>Stock Level</th>
-					<th>Action</th>
+
 				</tr>
 			</thead>
 			<tbody>
@@ -101,35 +137,6 @@
 			</tbody>
 		</table>
 
-	<div class="centered-content">
-		<table class="product-table">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-						<th>Price</th>
-						<th>Stock Level</th>
-						<th>Action</th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for product in products %}
-					<tr>
-						<td>{{ product.name }}</td>
-						<td>{{ product.description }}</td>
-						<td>{{ product.price }}</td>
-						<td>{{ product.stock_level }}</td>
-						<td>
-							<form action="{{ url_for('add_to_cart') }}" method="post">
-								<input type="hidden" name="product_id" value="{{ product.product_id }}">
-								<input type="submit" value="Add to Cart">
-							</form>
-						</td>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-	</div>
 
 
 <!-- - Footer -->

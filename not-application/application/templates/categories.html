@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="\static\style.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
 </head>
 <body>
-
+     <!-- Navigation -->
+     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-logo" href=""><img src="\static\logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('category') }}">category</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('products') }}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('cart') }}">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('shipping') }}">Shipping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('payment') }}">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
     <!-- Categories -->
@@ -15,25 +61,25 @@
     <div id="earthCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="forest-bike-trails.jpg" class="d-block w-50 mx-auto" alt="Forest Bike Trails">
+                <img src="\static\mountain-biking.png" class="d-block w-50 mx-auto" alt="Forest Bike Trails">
                 <div class="carousel-caption">
                     Forest Bike Trails
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="zip-lining.jpg" class="d-block w-50 mx-auto" alt="Zip Lining">
+                <img src="\static\zipline.png" class="d-block w-50 mx-auto" alt="Zip Lining">
                 <div class="carousel-caption">
                     Zip Lining
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="adventure-buggy.jpg" class="d-block w-50 mx-auto" alt="Adventure Buggy">
+                <img src="\static\dunebuggy.png" class="d-block w-50 mx-auto" alt="Adventure Buggy">
                 <div class="carousel-caption">
                     Adventure Buggy
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="go-karting.jpg" class="d-block w-50 mx-auto" alt="Go Karting">
+                <img src="\static\gokarting.png" class="d-block w-50 mx-auto" alt="Go Karting">
                 <div class="carousel-caption">
                     Go Karting
                 </div>

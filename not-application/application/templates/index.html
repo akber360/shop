@@ -27,19 +27,25 @@
                         <a class="nav-link" href="{{ url_for('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                        <a class="nav-link" href="{{ url_for('category') }}">category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('products') }}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('cart') }}">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('shipping') }}">Shipping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('payment') }}">Payment</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cart</a>
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +64,7 @@
                 <h2>Add some fun to your weekend</h2>
                 <p>We offer a range of outdoor activities split into four categories:</p>
                 <p class="four-elements">Water, Fire, Earth and Air</p>
-                <a href="#" class="btn btn-primary">Learn More</a>
+                <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More</a>
             </div>
         </div>
         <div class="col-md-6 image-column">
@@ -68,8 +74,6 @@
         </div>
     </div>
 </div>
-
-
 
 <!-- - Footer -->
 <footer>

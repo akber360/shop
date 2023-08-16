@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="\static\style.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
     <title>Contact Me - Adventruascape</title>
 </head>
 <body>
-
+     <!-- Navigation -->
+     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-logo" href=""><img src="\static\logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('category') }}">category</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('products') }}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('cart') }}">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('shipping') }}">Shipping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('payment') }}">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="contact-container">
         <h1>Contact Me</h1>
 
@@ -31,6 +77,52 @@
             </ul>
         </div>
     </div>
+    <div class="contact-container">
 
+        <div class="contact-info">
+
+            <h2>Contact Us</h2>
+
+            <p>If you have any inquiries or feedback, feel free to contact us using the form below or using the following details:</p>
+
+            <ul>
+
+                <li><strong>Address:</strong> New Palace, London Road, Ealing, W55RF</li>
+
+                <li><strong>Phone:</strong> 02088679650</li>
+
+                <li><strong>Email:</strong> info@adventurascape.com</li>
+
+            </ul>
+
+        </div>
+
+       
+
+        <div class="contact-form">
+
+            <h2>Send us a message</h2>
+
+            <form action="" method="post">
+
+                <label for="name">Name</label>
+
+                <input type="text" id="name" name="name" required>              
+
+                <label for="email">Email</label>
+
+                <input type="email" id="email" name="email" required>               
+
+                <label for="message">Message</label>
+
+                <textarea id="message" name="message" rows="4" required></textarea>              
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+    </div>
 </body>
 </html>
