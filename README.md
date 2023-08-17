@@ -79,5 +79,37 @@ Acknowledgements: all QA trainers and Earl was super helpful in answering my que
 risk assesment
 ![image](https://github.com/akber360/shop/assets/139133081/24b8b668-c047-4045-bf16-ca100dc1668a)
 
+The following photos are the development lifecycle, showing my planning process, webpage logic, database design idea.
+![image9](https://github.com/akber360/shop/assets/139133081/e6877e61-0bb5-4d00-ba8a-bacc6fe11245)
+laid out all the html pages I would require
+
+![image8](https://github.com/akber360/shop/assets/139133081/82f09b1b-3a27-474e-8b40-9367b67459b0)
+first mock of homepage and listing acceptance criteria on what is needs to looklike and be able to do.
+![image6](https://github.com/akber360/shop/assets/139133081/879bb989-d740-4b19-89c6-2967a7819fce)
+Further creating user stories for the homepage
+
+![image7](https://github.com/akber360/shop/assets/139133081/75945311-5ef1-4a6a-b9b3-45300181855a)
+Here I made HTML route, showing how from home page user can naviagate to many places but highlighting the process from cart to checkout to payment page.
+
+
+![image5](https://github.com/akber360/shop/assets/139133081/03d9d198-f079-4970-b576-72f8bf4d3d73)
+
+Navbar requiremnts 
+
+![image4](https://github.com/akber360/shop/assets/139133081/dcc600f4-9d9e-4642-be72-5caf9512da39)
+init .py file requirements
+
+![image3](https://github.com/akber360/shop/assets/139133081/5a741683-3c86-4d4d-bf95-8ed0db0c4975)
+Databse design inc ERD mock + payment page requiremtns.
+![image0](https://github.com/akber360/shop/assets/139133081/cca4ca91-546a-43ad-af4b-311790d430c2)
+payment page requiremnts.
+
+![image2](https://github.com/akber360/shop/assets/139133081/6e603b11-c742-4ba1-8f98-dc65520fce8c)
+Jenkins setup instrcutions 
+
+![image1](https://github.com/akber360/shop/assets/139133081/35a70201-dc2e-4024-a802-83ddc6764f6e)
+All cart redquirments as well as project task outline to be completed by monday. and outlining wednesday tasks.
+
+
 
 
