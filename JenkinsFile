@@ -7,7 +7,7 @@ pipeline{
         stage('Build'){
             steps{
                 sh "sudo apt install -y python3-pip"
-                sh "export" SECRET_KEY=${SECRET_KEY}
+                sh "export SECRET_KEY=${SECRET_KEY}"
                 sh "env"
                 
             }
