@@ -9,7 +9,7 @@ pipeline{
         }
         stage('Dependencies'){
             steps{
-                sh "pip install -r/home/ubuntu/shop/not-application/requirements.txt"
+                sh "pip install -r not-application/requirements.txt"
             }
         }
         stage('Deploy'){
