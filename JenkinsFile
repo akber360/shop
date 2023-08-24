@@ -4,17 +4,17 @@ pipeline{
         stage('Build'){
             steps{
                 sh "sudo apt install -y python3-pip"
-                sh "pip install -r requirements.txt"
+                
             }
         }
         stage('Dependencies'){
             steps{
-                sh "pip install -r shop/not-application/requirements.txt"
+                sh "pip install -r requirements.txt"
             }
         }
         stage('Deploy'){
             steps{
-                sh "python3 shop/not-application/app.py"
+                sh "python3 not-application/app.py"
             }
         }
     }
